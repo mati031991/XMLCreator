@@ -1,0 +1,10 @@
+C:\private_repo\XMLSerializer\bin\Debug\XMLSerializer.exe.config
+C:\private_repo\XMLSerializer\bin\Debug\XMLSerializer.exe
+C:\private_repo\XMLSerializer\bin\Debug\XMLSerializer.pdb
+C:\private_repo\XMLSerializer\obj\Debug\XMLSerializer.csprojAssemblyReference.cache
+C:\private_repo\XMLSerializer\obj\Debug\XMLSerializer.Form1.resources
+C:\private_repo\XMLSerializer\obj\Debug\XMLSerializer.Properties.Resources.resources
+C:\private_repo\XMLSerializer\obj\Debug\XMLSerializer.csproj.GenerateResource.cache
+C:\private_repo\XMLSerializer\obj\Debug\XMLSerializer.csproj.CoreCompileInputs.cache
+C:\private_repo\XMLSerializer\obj\Debug\XMLSerializer.exe
+C:\private_repo\XMLSerializer\obj\Debug\XMLSerializer.pdb

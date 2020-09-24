@@ -1,0 +1,13 @@
+[SAMOCHOD]
+[nr_rejestracyjny]
+SKL40443
+[marka]
+Opel
+[rok_produkcji]
+2015
+[kolor]
+czarny
+[ilosc_pasazerow]
+5
+[END_SAMOCHOD]
+]
