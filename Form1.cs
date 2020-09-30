@@ -1,12 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace XMLSerializer
@@ -26,8 +19,20 @@ namespace XMLSerializer
             {
                 Car car = new Car(RejestrationNumberBox.Text, BrandBox.Text, Int32.Parse(YearBox.Text), ColorBox.Text, Int32.Parse(PasangerCountBox.Text));
                 _cars.Add(car);
-                dataGridView1.Rows.Add(RejestrationNumberBox.Text, BrandBox.Text, YearBox.Text, ColorBox.Text, PasangerCountBox.Text);
+                DisplayinDataGride(dataGridView1, car);
             }
+        }
+
+        public void DisplayinDataGride(DataGridView sender, List<Car> items)
+        {
+            foreach (var item in items)
+            {
+                sender.Rows.Add(item.registrationNumber, item.brand, item.manufacturerYear, item.color, item.passangerCount);
+            }
+        }
+        public void DisplayinDataGride(DataGridView sender, Car item)
+        {
+            sender.Rows.Add(item.registrationNumber, item.brand, item.manufacturerYear, item.color, item.passangerCount);
         }
 
         private bool ValidFields()
@@ -90,6 +95,30 @@ namespace XMLSerializer
         {
             FillCreator fill = new FillCreator();
             fill.Write(_cars);
+            fill.Close();
+        }
+
+        private void ReadFromFillButton_Click(object sender, EventArgs e)
+        {
+            FillCreator fill = new FillCreator();
+            fill.Read();
+            fill.Close();
+        }
+
+        private void SerializeButton_Click(object sender, EventArgs e)
+        {
+            XmlCreator xmlCreator = new XmlCreator();
+            xmlCreator.Serialize(_cars);
+            xmlCreator.Close();
+        }
+
+        private void DeserializeButton_Click(object sender, EventArgs e)
+        {
+            XmlCreator xmlCreator = new XmlCreator();
+            Cars deserializedCars = xmlCreator.Deserialize();
+            xmlCreator.Close();
+            _cars.AddRange(deserializedCars.CarList);
+            DisplayinDataGride(dataGridView1, _cars);
         }
     }
 }

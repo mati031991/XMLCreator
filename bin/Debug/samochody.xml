@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Cars xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CarList>
+    <Car>
+      <registrationNumber>SKL17NN</registrationNumber>
+      <brand>Opel</brand>
+      <manufacturerYear>2015</manufacturerYear>
+      <color>srebrny</color>
+      <passangerCount>5</passangerCount>
+    </Car>
+    <Car>
+      <registrationNumber>SC14589</registrationNumber>
+      <brand>Skoda</brand>
+      <manufacturerYear>2010</manufacturerYear>
+      <color>niebieski</color>
+      <passangerCount>5</passangerCount>
+    </Car>
+  </CarList>
+</Cars>

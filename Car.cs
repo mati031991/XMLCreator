@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace XMLSerializer
 {
+    [System.Xml.Serialization.XmlRoot("Cars")]
     public class Car
     {
-        public string registrationNumber { get; private set; }
-        public string brand { get; private set; }
-        public int manufacturerYear { get; private set; }
-        public string color { get; private set; }
-        public int passangerCount { get; private set; }
+        public string registrationNumber { get; set; }
+        public string brand { get; set; }
+        public int manufacturerYear { get; set; }
+        public string color { get; set; }
+        public int passangerCount { get; set; }
 
         public Car()
         {

@@ -127,7 +127,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(22, 206);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 14);
+            this.label5.Size = new System.Drawing.Size(125, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "Liczba pasażerów:";
             // 
@@ -136,7 +136,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(22, 161);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 14);
+            this.label4.Size = new System.Drawing.Size(45, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Kolor:";
             // 
@@ -145,7 +145,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(22, 119);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 14);
+            this.label3.Size = new System.Drawing.Size(99, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Rok Produkcji:";
             // 
@@ -154,7 +154,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(22, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 14);
+            this.label2.Size = new System.Drawing.Size(51, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Marka:";
             // 
@@ -189,6 +189,7 @@
             this.DeserializeButton.TabIndex = 10;
             this.DeserializeButton.Text = "Deserializuj";
             this.DeserializeButton.UseVisualStyleBackColor = true;
+            this.DeserializeButton.Click += new System.EventHandler(this.DeserializeButton_Click);
             // 
             // SerializeButton
             // 
@@ -198,6 +199,7 @@
             this.SerializeButton.TabIndex = 9;
             this.SerializeButton.Text = "Serializuj";
             this.SerializeButton.UseVisualStyleBackColor = true;
+            this.SerializeButton.Click += new System.EventHandler(this.SerializeButton_Click);
             // 
             // ReadFromFillButton
             // 
@@ -207,6 +209,7 @@
             this.ReadFromFillButton.TabIndex = 8;
             this.ReadFromFillButton.Text = "Odczytaj z pliku";
             this.ReadFromFillButton.UseVisualStyleBackColor = true;
+            this.ReadFromFillButton.Click += new System.EventHandler(this.ReadFromFillButton_Click);
             // 
             // SaveToFillButton
             // 

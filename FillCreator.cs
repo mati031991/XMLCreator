@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace XMLSerializer
@@ -36,6 +37,21 @@ namespace XMLSerializer
                 sw.WriteLine("[END_SAMOCHOD]");
             }
             sw.Close();
+        }
+        public void Read()
+        {
+            //StreamReader sr = new StreamReader(_fs);
+            //string line = "";
+            //while ((line = sr.ReadLine()) != line.Substring("[SAMOCHOD]", "[END_SAMOCHOD]"))
+            //{
+            //    Console.WriteLine(line);
+
+            //}
+            //sr.Close();
+        }
+        public void Close()
+        {
+            _fs.Close();
         }
     }
 }
