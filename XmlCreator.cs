@@ -14,11 +14,11 @@ namespace XMLSerializer
         private XmlSerializer _xmlSerializer;
         FileStream _fs;
 
-        public XmlCreator()
+        public XmlCreator(string filePath)
         {
             try
             {
-                _fs = new FileStream("./samochody.xml", FileMode.Open);
+                _fs = new FileStream(filePath, FileMode.OpenOrCreate);
                 _xmlSerializer = new XmlSerializer(typeof(Cars));
             }
             catch (Exception)

@@ -107,18 +107,41 @@ namespace XMLSerializer
 
         private void SerializeButton_Click(object sender, EventArgs e)
         {
-            XmlCreator xmlCreator = new XmlCreator();
-            xmlCreator.Serialize(_cars);
-            xmlCreator.Close();
+            string filePath = String.Empty;
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Pliki xml (*.xml)|*.xml";
+            saveFileDialog.Title = "Zapisz plik xml z danymi";
+            saveFileDialog.DefaultExt = "xml";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                filePath = openFileDialog1.FileName;
+
+                XmlCreator xmlCreator = new XmlCreator(filePath);
+                xmlCreator.Serialize(_cars);
+                xmlCreator.Close();
+            }
         }
 
         private void DeserializeButton_Click(object sender, EventArgs e)
         {
-            XmlCreator xmlCreator = new XmlCreator();
-            Cars deserializedCars = xmlCreator.Deserialize();
-            xmlCreator.Close();
-            _cars.AddRange(deserializedCars.CarList);
-            DisplayinDataGride(dataGridView1, _cars);
+            openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "Pliki xml (*.xml)|*.xml";
+            openFileDialog1.Title = "Otwórz plik xml z danymi";
+            openFileDialog1.DefaultExt = "xml";
+
+            string filePath = String.Empty;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                filePath = openFileDialog1.FileName;
+
+                XmlCreator xmlCreator = new XmlCreator(filePath);
+                Cars deserializedCars = xmlCreator.Deserialize();
+                xmlCreator.Close();
+                _cars.AddRange(deserializedCars.CarList);
+                DisplayinDataGride(dataGridView1, _cars);
+            }
         }
     }
 }

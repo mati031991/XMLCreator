@@ -2,17 +2,31 @@
 <Cars xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <CarList>
     <Car>
-      <registrationNumber>SKL17NN</registrationNumber>
+      <registrationNumber>Skl17nn</registrationNumber>
       <brand>Opel</brand>
-      <manufacturerYear>2015</manufacturerYear>
+      <manufacturerYear>2003</manufacturerYear>
       <color>srebrny</color>
       <passangerCount>5</passangerCount>
     </Car>
     <Car>
-      <registrationNumber>SC14589</registrationNumber>
-      <brand>Skoda</brand>
-      <manufacturerYear>2010</manufacturerYear>
+      <registrationNumber>SC23ER</registrationNumber>
+      <brand>Opel</brand>
+      <manufacturerYear>2005</manufacturerYear>
       <color>niebieski</color>
+      <passangerCount>5</passangerCount>
+    </Car>
+    <Car>
+      <registrationNumber>KR34FG</registrationNumber>
+      <brand>Toyota</brand>
+      <manufacturerYear>2007</manufacturerYear>
+      <color>niebieski</color>
+      <passangerCount>5</passangerCount>
+    </Car>
+    <Car>
+      <registrationNumber>SCZ34123</registrationNumber>
+      <brand>Ford</brand>
+      <manufacturerYear>2015</manufacturerYear>
+      <color>czarny</color>
       <passangerCount>5</passangerCount>
     </Car>
   </CarList>
